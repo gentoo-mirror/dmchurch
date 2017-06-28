@@ -7,12 +7,12 @@ inherit eutils unpacker
 
 COMMIT_HASH="e5ac865"
 
-SRC_URI_BASE="https://s3.amazonaws.com/prerelease.keybase.io/linux_binaries/deb/keybase"
+SRC_URI_BASE="https://s3.amazonaws.com/prerelease.keybase.io/linux_binaries/deb/keybase_"
 
 DESCRIPTION="Keybase Go client, filesystem, and GUI"
 HOMEPAGE="https://keybase.io"
-SRC_URI="amd64? ( ${SRC_URI_BASE}_${PV/_p/-}.${COMMIT_HASH}_amd64.deb )
-	x86? ( ${SRC_URI_BASE}_${PV/_p/-}.${COMMIT_HASH}_i386.deb )"
+SRC_URI="amd64? ( ${SRC_URI_BASE}${PV/_p/-}.${COMMIT_HASH}_amd64.deb )
+	x86? ( ${SRC_URI_BASE}${PV/_p/-}.${COMMIT_HASH}_i386.deb )"
 RESTRICT="mirror"
 
 LICENSE="BSD"
